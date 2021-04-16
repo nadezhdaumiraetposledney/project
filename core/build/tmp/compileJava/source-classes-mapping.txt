@@ -1,0 +1,15 @@
+com/mygdx/game/Actors/Player.java
+ com.mygdx.game.Actors.Player
+com/mygdx/game/Animations.java
+ com.mygdx.game.Animations
+com/mygdx/game/Traffic/Point2d.java
+ com.mygdx.game.Traffic.Point2d
+com/mygdx/game/Actors/Scene.java
+ com.mygdx.game.Actors.Scene
+ com.mygdx.game.Actors.Scene$1SceneActor
+com/mygdx/game/Actors/Npc.java
+ com.mygdx.game.Actors.Npc
+com/mygdx/game/Screens/GameSc.java
+ com.mygdx.game.Screens.GameSc
+com/mygdx/game/Main.java
+ com.mygdx.game.Main
