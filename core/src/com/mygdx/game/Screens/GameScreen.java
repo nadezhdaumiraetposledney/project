@@ -21,6 +21,7 @@ import com.mygdx.game.Traffic.SubjectProcessor;
 public class GameScreen extends Stage implements Screen{
     Main main;
     OrthographicCamera camera;
+    String string=null;
 
     private Player player;
     private Texture[] pengTexture;
@@ -53,6 +54,10 @@ public class GameScreen extends Stage implements Screen{
 
     public Player getPlayer() {
         return player;
+    }
+
+    public void setString(String string) {
+        this.string = string;
     }
 
     public GameScreen(Main main) {
@@ -114,6 +119,7 @@ public class GameScreen extends Stage implements Screen{
 
         if (count==7 && location.getLocY()==0 && location.getLocX(player.getActorY())==0){
             main.setScreen(new GameScreen(main));
+            string="YOU WIN";
             dispose();
         }
     }
@@ -140,7 +146,7 @@ public class GameScreen extends Stage implements Screen{
 
     @Override
     public void dispose() {
-        main.setScreen(new EndScreen(main,count,time));
+        main.setScreen(new EndScreen(main,count,time,string));
         location.dispose();
         batch.dispose();
         super.dispose();
