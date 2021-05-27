@@ -69,38 +69,8 @@ public class Npc extends GameCharacter {
 
     public void effect(Player player) {
         if(player.animations.getBoundingRectangle().overlaps(this.animations.getBoundingRectangle())) {
+            screen.setString("YOU DIED");
             screen.dispose();
         }
     }
-
-    /*  @Override
-    public void draw(Batch batch, float parentAlpha) {
-        sprite.setPosition(getX(),getY());
-        sprite.draw(batch);
-        super.draw(batch, parentAlpha);
-    }
-
-    @Override
-    public void act(float delta) {
-        super.act(delta);
-    }
-
-    public void CrossingNpc(Player player){
-        //Gdx.app.log("d",player.animations.getBoundingRectangle()+" "+sprite.getBoundingRectangle());
-        if(player.animations.getBoundingRectangle().overlaps(sprite.getBoundingRectangle()))
-        {
-           *//* Gdx.input.getTextInput(new Input.TextInputListener() {
-                @Override
-                public void input(String text) {
-
-                }
-
-                @Override
-                public void canceled() {
-
-                }
-            },"dialogue","Hello","");*//*
-           Gdx.app.log("npc","sprite");
-        }
-    }*/
 }
