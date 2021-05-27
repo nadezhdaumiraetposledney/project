@@ -38,6 +38,9 @@ public class EndScreen implements Screen {
         main.getBatch().setProjectionMatrix(camera.combined);
         main.getBatch().begin();
         main.getFont().setColor(1f,0.7f,0.7f,0.5f);
+        main.getFont().getData().setScale(2,2);
+        main.getFont().draw(main.getBatch(), string, 100, 300);
+        main.getFont().getData().setScale(1,1);
         main.getFont().draw(main.getBatch(), "penguins collected: "+ count, 300, 300);
         main.getFont().draw(main.getBatch(), "elapsed time: "+ time, 300, 200);
         main.getBatch().end();
